@@ -1,0 +1,68 @@
+body{
+    background: url(feedback1.png);
+    
+
+}
+.feedback-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+    backdrop-filter: blur(20px);
+    
+}
+
+.feedback-section h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.feedback-section p {
+    margin-bottom: 20px;
+}
+
+#feedback-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+ .form-group textarea { 
+     height: 80px; ;
+     resize: none 
+     
+ } 
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}

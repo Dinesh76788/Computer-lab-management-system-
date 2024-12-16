@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin reg</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+
+<body>
+    <center>
+        <form name="myform" action="{% url 'adreg' %}" method="POST" onsubmit="return validateForm()" autocomplete="off">
+            {% csrf_token %}
+            <div class="wrapper">
+                <div class="form-box">
+                    <h2>Admin Register</h2>
+                    <label for="username">Username :</label>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"
+                        id="username" name="username" value=""><br><br>
+                    <label for="email">Email :</label>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input
+                        type="email" id="email" name="email" value=""><br><br>
+                    <label for="password">Password :</label>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="password"
+                        id="password" name="password" value=""><br><br>
+                    <label for="confirm_password">Confirm Password :</label>
+                    <input type="password" id="confirm_password" name="confirm_password" value=""><br><br><br>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="login-li">
+                        <p>Already have an account? <a href="{% url 'adlogin' %}" class="login-link"> adminLogin</a></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </center>
+    <script>
+        
+            function validateForm() {
+                var username = document.getElementById("username").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+                var confirm_password = document.getElementById("confirm_password").value;
+        
+                // Check if username, email, password, or confirm password is empty
+                if (username.trim() === "") {
+                    alert("Please enter a username.");
+                    return false; // Prevent form submission
+                }
+        
+                if (email.trim() === "") {
+                    alert("Please enter an email.");
+                    return false; // Prevent form submission
+                }
+        
+                if (password.trim() === "") {
+                    alert("Please enter a password.");
+                    return false; // Prevent form submission
+                }
+        
+                if (confirm_password.trim() === "") {
+                    alert("Please confirm your password.");
+                    return false; // Prevent form submission
+                }
+        
+                // Check if passwords match
+                if (password !== confirm_password) {
+                    alert("Passwords do not match.");
+                    return false; // Prevent form submission
+                }
+        
+                // Check if password length is at least 3 characters
+                if (password.length < 3) {
+                    alert("Password should be at least 3 characters long.");
+                    return false; // Prevent form submission
+                }
+        
+                // If all validations pass, allow form submission
+                alert("Admin register created successfully!"); // Show final alert
+                return true;
+            }
+        
+        
+    </script>
+</body>
+
+</html>

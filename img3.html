@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>All Labs</title>
+
+    <!-- ===== Link Swiper's CSS (Downloaded locally) ===== -->
+    <link rel="stylesheet" href="static/swiper-bundle.min.css" />
+
+    <!-- ===== Fontawesome CDN Link (Downloaded locally) ===== -->
+    <link rel="stylesheet" href="static/all.min.css" />
+
+    <!-- ===== CSS (Downloaded locally) ===== -->
+    <link rel="stylesheet" href="static/img3.css" />
+</head>
+<body>
+  {% csrf_token %}
+    <section>
+      <div class="swiper mySwiper container">
+        <div class="swiper-wrapper content">
+          <!-- Lab 1 -->
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <div class="image">
+                <img src="{% static 'c1.png' %}" alt="" />
+              </div>
+              <div class="name-profession">
+                <span class="name">BCA LAB</span>
+              </div>
+              <div class="button">
+                <a href="{% url 'bcaabout' %}"><button class="aboutlab">About Lab</button></a>
+                <a href="{% url 'seatbca' %}">  <button class="click">Click Here</button></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lab 2 -->
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <div class="image">
+                <img src="{% static 'c2.png' %}" alt="" />
+              </div>
+              <div class="name-profession">
+                <span class="name">BSC LAB</span>
+              </div>
+              <div class="button">
+                <button class="aboutlab">About Lab</button>
+                <a href="{% url 'seatbsc' %}">  <button class="click">Click Here</button></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lab 3 -->
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <div class="image">
+                <img src="{% static 'c3.png' %}" alt="" />
+              </div>
+              <div class="name-profession">
+                <span class="name">MSC(IT) LAB</span>
+              </div>
+              <div class="button">
+                <button class="aboutlab">About Lab</button>
+                <a href="{% url 'seatmscit' %}">  <button class="click">Click Here</button></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lab 4 -->
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <div class="image">
+                <img src="{% static 'c4.png' %}" alt="" />
+              </div>
+              <div class="name-profession">
+                <span class="name">MPHIL LAB</span>
+              </div>
+              <div class="button">
+                <button class="aboutlab">About Lab</button>
+                <a href="{% url 'mphill' %}">  <button class="click">Click Here</button></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+  
+    <script src="{% static 'swiper-bundle.min.js' %}"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+</body>
+</html>

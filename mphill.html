@@ -1,0 +1,549 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPHILL LAB</title>
+    <link rel="stylesheet" href="{% static 'seat.css' %}">
+</head>
+
+<body>
+
+    {% csrf_token %}
+    <div class="seatbca">
+        <div class="plane">
+            <div class="cockpit">
+
+                <h1>MPHILL LAB</h1>
+                <h3>Select the not working system.</h3>
+            </div>
+            <div class="exit exit--front fuselage">
+
+            </div>
+            <ol class="cabin fuselage">
+                <li class="row row--1">
+                    <ol class="seats" type="A">
+                        <li class="seat">
+                            <input type="checkbox" id="S1" onclick="toggleTextarea(this)">
+                            <label for="S1" class="seat-label">
+                                <img src="{% static 'computer-img.png' %}" alt="Computer">
+                            </label>
+                            <span class="seat-number">S1</span>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="S2" onclick="toggleTextarea(this)">
+                            <label for="S2" class="seat-label">
+                                <img src="{% static 'computer-img.png' %}" alt="Computer">
+                            </label>
+                            <span class="seat-number">S2</span>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="S3"onclick="toggleTextarea(this)">
+                            <label for="S3" class="seat-label">
+                                <img src="{% static 'computer-img.png' %}" alt="Computer">
+                            </label>
+                            <span class="seat-number">S3</span>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" disabled id="1D">
+                            <label for="1D">occupied</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="S5"onclick="toggleTextarea(this)">
+                            <label for="S5" class="seat-label">
+                                <img src="{% static 'computer-img.png' %}" alt="Computer">
+                            </label>
+                            <span class="seat-number">S5</span>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="S6"onclick="toggleTextarea(this)">
+                            <label for="S6" class="seat-label">
+                                <img src="{% static 'computer-img.png' %}" alt="Computer">
+                            </label>
+                            <span class="seat-number">S6</span>
+                        </li>
+
+                </li>
+                </li>
+            </ol>
+
+            <li class="row row--2">
+                <ol class="seats">
+                    <li class="seat">
+                        <input type="checkbox" id="S7"onclick="toggleTextarea(this)">
+                        <label for="S7" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S7</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S8"onclick="toggleTextarea(this)">
+                        <label for="S8" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S8</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S9"onclick="toggleTextarea(this)">
+                        <label for="S9" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S9</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S10"onclick="toggleTextarea(this)">
+                        <label for="S10" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S10</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S11"onclick="toggleTextarea(this)">
+                        <label for="S11" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S11</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S12"onclick="toggleTextarea(this)">
+                        <label for="S12" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S12</span>
+                    </li>
+                </ol>
+            </li>
+            <li class="row row--3">
+                <ol class="seats">
+                    <li class="seat">
+                        <input type="checkbox" id="S13"onclick="toggleTextarea(this)">
+                        <label for="S13" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S13</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S14"onclick="toggleTextarea(this)">
+                        <label for="S14" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S14</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S15"onclick="toggleTextarea(this)">
+                        <label for="S15" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S15</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S16"onclick="toggleTextarea(this)">
+                        <label for="S16" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S16</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S17"onclick="toggleTextarea(this)">
+                        <label for="S17" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S17</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S18"onclick="toggleTextarea(this)">
+                        <label for="S18" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S18</span>
+                    </li>
+
+                </ol>
+            </li>
+            <li class="row row--4">
+                <ol class="seats">
+                    <li class="seat">
+                        <input type="checkbox" id="S19"onclick="toggleTextarea(this)">
+                        <label for="S19" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S19</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S20"onclick="toggleTextarea(this)">
+                        <label for="S20" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S20</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S21"onclick="toggleTextarea(this)">
+                        <label for="S21" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S21</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S22"onclick="toggleTextarea(this)">
+                        <label for="S22" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S22</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S23"onclick="toggleTextarea(this)">
+                        <label for="S23" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S23</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S24"onclick="toggleTextarea(this)">
+                        <label for="S24" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S24</span>
+                    </li>
+
+                </ol>
+            </li>
+            <center>
+                <form name="myform" id="myform" method="post" action="{% url 'submit_message' %}" onsubmit="return validateForm()">
+                    {% csrf_token %}
+                    <textarea id="messageInput" name="messageInput" placeholder="Enter your comments..." rows="10" cols="50" style="display: none;"></textarea><br>
+                    <div class="notify">
+                        <button type="submit" id="confirmButton" style="display: none;">Confirm</button>
+                    </div>
+                    
+                </form>
+    
+    
+            </center>
+            <li class="row row--5">
+                <ol class="seats">
+                    <li class="seat">
+                        <input type="checkbox" id="S25"onclick="toggleTextarea(this)">
+                        <label for="S25" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S25</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S26"onclick="toggleTextarea(this)">
+                        <label for="S26" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S26</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S27"onclick="toggleTextarea(this)">
+                        <label for="S27" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S27</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S28"onclick="toggleTextarea(this)">
+                        <label for="S28" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S28</span>
+                    </li>
+
+                    <li class="seat">
+                        <input type="checkbox" id="S29"onclick="toggleTextarea(this)">
+                        <label for="S29" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S29</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S30"onclick="toggleTextarea(this)">
+                        <label for="S30" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S30</span>
+                    </li>
+
+                </ol>
+            </li>
+
+            <li class="row row--6">
+                <ol class="seats">
+                    <li class="seat">
+                        <input type="checkbox" id="S31"onclick="toggleTextarea(this)">
+                        <label for="S31" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}"alt="Computer">
+                        </label>
+                        <span class="seat-number">S31</span>
+                    </li>
+                    
+                    <li class="seat">
+                        <input type="checkbox" id="S32"onclick="toggleTextarea(this)">
+                        <label for="S32" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S32</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S33"onclick="toggleTextarea(this)">
+                        <label for="S33" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S33</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S34"onclick="toggleTextarea(this)">
+                        <label for="S34" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S34</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S35"onclick="toggleTextarea(this)">
+                        <label for="S35" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S35</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S36"onclick="toggleTextarea(this)">
+                        <label for="S36" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S36</span>
+                    </li>
+                </ol>
+            </li>
+
+            <li class="row row--7">
+                <ol class="seats">
+                    <li class="seat">
+                        <input type="checkbox" id="S37"onclick="toggleTextarea(this)">
+                        <label for="S37" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S37</span>
+                    </li> 
+                    <li class="seat">
+                        <input type="checkbox" id="S38"onclick="toggleTextarea(this)">
+                        <label for="S38" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S38</span>
+                    </li>
+
+                    <li class="seat">
+                        <input type="checkbox" id="S39"onclick="toggleTextarea(this)">
+                        <label for="S39" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S39</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S40"onclick="toggleTextarea(this)">
+                        <label for="S40" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S40</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S41"onclick="toggleTextarea(this)">
+                        <label for="S41" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S41</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S42"onclick="toggleTextarea(this)">
+                        <label for="S42" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S42</span>
+                    </li>
+                </ol>
+            </li>
+
+            <li class="row row--8">
+                <ol class="seats">
+                    <li class="seat">
+                        <input type="checkbox" id="S43"onclick="toggleTextarea(this)">
+                        <label for="S43" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S43</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S44"onclick="toggleTextarea(this)">
+                        <label for="S44" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S44</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S45"onclick="toggleTextarea(this)">
+                        <label for="S45" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S45</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S46">
+                        <label for="S46" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S46</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S47">
+                        <label for="S47" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S47</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S48">
+                        <label for="S48" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S48</span>
+                    </li>
+                </ol>
+            </li>
+            <li class="row row--9">
+                <ol class="seats">
+                    <li class="seat">
+                        <input type="checkbox" id="S49"onclick="toggleTextarea(this)">
+                        <label for="S49" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S49</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S50"onclick="toggleTextarea(this)">
+                        <label for="S50" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S50</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S51"onclick="toggleTextarea(this)">
+                        <label for="S51" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S51</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S52"onclick="toggleTextarea(this)">
+                        <label for="S52" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S52</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S53"onclick="toggleTextarea(this)">
+                        <label for="S53" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S53</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S54"onclick="toggleTextarea(this)">
+                        <label for="S54" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S54</span>
+                    </li>
+                </ol>
+            </li>
+            <li class="row row--10">
+                <ol class="seats">
+                    <li class="seat">
+                        <input type="checkbox" id="S55"onclick="toggleTextarea(this)">
+                        <label for="S55" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S55</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S56"onclick="toggleTextarea(this)">
+                        <label for="S56" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S56</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S57"onclick="toggleTextarea(this)">
+                        <label for="S57" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S57</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S58"onclick="toggleTextarea(this)">
+                        <label for="58" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S58</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S59"onclick="toggleTextarea(this)">
+                        <label for="S59" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S59</span>
+                    </li>
+                    <li class="seat">
+                        <input type="checkbox" id="S60"onclick="toggleTextarea(this)">
+                        <label for="S60" class="seat-label">
+                            <img src="{% static 'computer-img.png' %}" alt="Computer">
+                        </label>
+                        <span class="seat-number">S60</span>
+                    </li>
+                        Other seats omitted for brevity
+                     </ol>
+                </li>
+            </ol>
+        </div>
+       
+    </div>
+    <script>
+        function toggleTextarea(checkbox) {
+            var seatNumber = checkbox.id;
+            var confirmButton = document.getElementById("confirmButton");
+            var textarea = document.getElementById("messageInput");
+        
+            // Clear the textarea
+            textarea.value = "";
+        
+            if (checkbox.checked) {
+                // Disable the checkbox
+                checkbox.disabled = true;
+        
+                // Get the seat information from the label associated with the checkbox
+                var seatInfo = checkbox.parentElement.querySelector(".seat-label").textContent.trim();
+        
+                // Show dialogue box specific to the checkbox with seat number and information
+                alert("Seat " + seatNumber + ".." + seatInfo + " Please enter your comments.");
+        
+                // Append checkbox information to textarea
+                textarea.value = "Seat " + seatNumber + " : " + seatInfo + ".\n";
+        
+                // Show textarea and confirm button
+                textarea.style.display = "block";
+                confirmButton.style.display = "block";
+            } else {
+                // Hide textarea and confirm button if no checkboxes are checked
+                textarea.style.display = "none";
+                confirmButton.style.display = "none";
+            }
+        }
+        
+    </script>
+        
+    
+    </body>
+
+</html>

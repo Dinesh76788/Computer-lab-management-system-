@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="static/contact.css">
+</head>
+<body>
+    {% csrf_token %}  
+<header>
+    <h1>Contact Us</h1>
+</header>
+<main>
+    <section class="contact-info">
+        <ul>
+            <li><a href="https://sjctnc.edu.in">Email:sjctnc.edu.in</a></li>
+            <li><a href="tel:+1234567890">Phone: +1 (234) 567-890</a></li>
+            <li><a href="#">Support Hours: Monday - Friday, 9:00 AM - 5:00 PM</a></li>
+            <li><a href="https://example.com/support">Online Support</a></li>
+            <li><a href="https://facebook.com/labmanagementsystem">Follow us on Facebook</a></li>
+            <li><a href="https://twitter.com/labmanagementsys">Follow us on Twitter</a></li>
+            <li><a href="feedback.html">Submit Feedback</a></li>
+            <li><a href="emergency.html">In Case of Emergency: +1 (234) 567-8910</a></li>
+        </ul>
+    </section>
+    <section class="additional-info">
+        <h2>Additional Information</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida nisi ut arcu lobortis, ac malesuada velit convallis.</p>
+        <img src="{% static 'repair.jpeg' %}" alt="Additional Image">
+    </section>
+</main>
+<div class="circle-images">
+    <img src="{% static 'add.png' %}" alt="Circle Image 1">
+    <img src="{% static 'call.png' %}" alt="Circle Image 2">
+    <img src="{% static 'mess.png' %}" alt="Circle Image 3">
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="static/login.css">
+   
+
+    
+</head>
+<body>
+    <center>
+<div class="center">
+    <h1 class="h1">Welcome!</h1>
+    <p class="p1">click staff or admin to continue</p>
+    <button class="btn-staff" onclick="window.location.href='#';"> <a href="{% url 'stlogin' %}">Staff</a> </button>
+    <button class="btn-admin" onclick="window.location.href='#';"><a href="{% url 'adlogin' %}">Admin</a></button>
+
+
+</div>
+
+    </center>
+    
+</body>
+</html> 

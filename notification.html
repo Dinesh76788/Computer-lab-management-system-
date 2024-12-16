@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Page</title>
+    <!-- Include Font Awesome for bell icon -->
+    <link rel="stylesheet" href="{% static 'all.min.css' %}">
+    <!-- Add your custom CSS if needed -->
+    <style>
+        /* Your custom CSS styles */
+        body{
+            background-color: lightgray;
+        }
+        img{
+            height: 100%;
+            width: 100px;
+        }
+        .notification-bell {
+            position: relative;
+        }
+        .badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 4px 6px;
+            font-size: 12px;
+        }
+        
+        /* Additional styles as needed */
+    </style>
+</head>
+<body>
+
+    <!-- Your notification bell icon -->
+    <div class="notification-bell">
+
+         <a href="{% url 'notification_page' %}"> 🔔</a> 
+            <!-- <i class="fa fa-bell"></i> -->
+            {% if notifications %}
+     
+                <span class="badge">{{ notifications.count }}</span>
+            {% endif %}
+        </a>
+    </div>
+
+    <!-- Display notifications -->
+    <div class="notification-list">
+        {% if notifications %}
+            <h2>Notifications</h2>
+            <ul>
+                {% for notification in notifications %}
+                    <li>{{ notification.message }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>click the bell  the message will show.</p>
+        {% endif %}
+    </div>
+
+    <!-- Your other HTML content goes here -->
+
+    <!-- Include any additional scripts if needed -->
+</body>
+</html>
